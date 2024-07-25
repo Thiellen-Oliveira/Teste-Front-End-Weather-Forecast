@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+body{
+    background:#dfdfdf;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;    
+}
+
+.container{   
+    background: linear-gradient(#abc5ff, #6d9bff);
+    color: #1D1E2E;
+    padding: 2.5rem;
+    width: 100%;   
+    margin: 4rem auto;
+    border-radius: 20px; 
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    max-width: 800px;          
+}
+
+.weather__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilização do searh */
+input{
+    border: none;
+    background: #ffffff;
+    outline: none;
+    padding: 0.7rem 2.5rem;
+    border-radius: 50px;   
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    font-size: 1.1rem;  
+}
+
+/* Estilização da cor do texto exibido no placeholder */
+input::placeholder{
+    color: #1D1E2E;
+}
+
+.weather__search{
+    position:relative;
+}
+
+/* Estilização do ícone searh */
+.weather__search i{
+    position:absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 15px;
+    color: #1D1E2E;
+    cursor: pointer;
+    
+}
+
+/* Estilização da informação que troca de Celsius para Fahrenheit */
+.weather__units{
+    font-size: 1.5rem;
+}
+
+.weather__units span{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.weather__units span:first-child{
+    margin-right: 0.5rem;
+}
+
+.weather__body{
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+}
+
+/* Estilização da informação que retorna data, mês e ano */
+.weather__datetime{
+    margin-bottom: 2rem;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+/* Estilização da informação que retorna o clima */
+.weather__forecast{    
+    color: #1D1E2E; 
+    display: inline-block;      
+    border-radius: 30px;     
+    
+}
+
+.weather__forecast p{
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+/* Estilização do ícone que indica o tipo do clima */
+.weather__icon img{
+    width: 200px;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));  
+
+    
+    border-radius: 25px;
+}
+
+/* Estilização das temperatura em tempo real */
+.weather__temperature{
+    font-size: 5rem;
+    font-weight: bold;    
+}
+
+/* Estilização das informações da temperatura mínima e máxima*/
+.weather__minmax{
+    display: flex;
+    justify-content: center;   
+    
+}
+
+.weather__minmax p{
+    font-size: 30px;
+    margin: 0.5rem;
+    font-weight: bold; 
+    
+}
+
+/* Estilização das informações adicionais do weather__info */
+.weather__info{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-top: 3rem;
+    font-weight: bold;
+    text-align: left;
+    justify-content: center;   
+}
+
+.weather__card{
+    display: flex;
+    align-items: center;    
+    padding: 1rem 1rem;
+    border-radius: 50px;
+    border: solid 0.15rem;
+}
+
+.weather__card i{
+    font-size: 1.8rem;
+    margin-right: 1rem;
+}
+
+.weather__card p{
+    font-size: 1.2rem;    
+    
+}
+
+/* Para adicionar responsividade a página */
+@media screen and (max-width:936px) {
+    container{
+      width: 90%;
+    }
+
+    .weather__header{
+        flex-direction: column;
+    }
+
+    .weather__units{
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .weather__info{
+        grid-template-columns:none
+    }
+}
